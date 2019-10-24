@@ -1,11 +1,11 @@
-import withLayout from "../components/MyLayout";
+import Layout from "../components/MyLayout";
 
 const About = () => {
   return (
-    <div>
+    <Layout>
       <p>This is the about page</p>
-    </div>
+    </Layout>
   );
 };
 
-export default withLayout(About);
+export default About;

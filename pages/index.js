@@ -1,11 +1,25 @@
-import withLayout from "../components/MyLayout";
+import Layout from "../components/MyLayout";
+import Link from "next/link";
 
-const Index = () => {
+const BlogLink = props => {
   return (
-    <div>
-      <p>Hello Next.js</p>
-    </div>
+    <li>
+      <Link href="/post/[id]" as={`/post/${props.id}`}>
+        <a>{props.id}</a>
+      </Link>
+    </li>
   );
 };
 
-export default withLayout(Index);
+const Index = () => {
+  return (
+    <Layout>
+      <p>My blog</p>
+      <BlogLink id="hello-nextjs" />
+      <BlogLink id="learn-nextjs" />
+      <BlogLink id="deploy-nextjs" />
+    </Layout>
+  );
+};
+
+export default Index;

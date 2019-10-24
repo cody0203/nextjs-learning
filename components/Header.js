@@ -13,6 +13,9 @@ export const Header = () => {
       <Link href="/about">
         <a style={linkStype}>About</a>
       </Link>
+      <Link href="/bat-man-shows">
+        <a style={linkStype}>Batman's shows</a>
+      </Link>
     </div>
   );
 };
